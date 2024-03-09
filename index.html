@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title> Anagrams Checker App </title>
+	<style>
+		* {font-size:50px; font-family:Calibri;}
+		body {background-color: lightyellow;}
+	</style>
+	<script>
+			function check()
+			{
+			event.preventDefault();		
+			let str1 = document.getElementById("str1");
+			let str2 = document.getElementById("str2");
+			let msg = document.getElementById("msg");
+			
+			let nstr1 = str1.value.split("").sort().join("");
+			let nstr2 = str2.value.split("").sort().join("");
+		
+			if(nstr1 == nstr2)
+
+				msg.innerHTML = "yes they are anagrams";
+			else
+				msg.innerHTML = " they are not anagrams";
+
+			}
+	</script>
+
+</head>
+<body>
+<center>
+		<h1> Anagram Checker App </h1>
+		<form onsubmit = "check()">
+			<input type ="text" placeholder = "enter name" id = "str1"/>
+			<br><br>
+			<input type ="text" placeholder = "enter name" id = "str2"/>
+			<br><br>
+
+			<input type = "submit" value = "Check"/>
+		</form>
+		<h2 id ="msg"/>
+</center>
+</body>
+</html>
+
+
+
